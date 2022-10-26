@@ -5,8 +5,23 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import logo from '../../assests/logo.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
+import Button from 'react-bootstrap/Button';
+import { Image } from 'react-bootstrap';
+import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
+
+  const {user, logout } = useContext(AuthContext);
+
+
+  const handleLogOut = () => {
+    logout()
+      .then(() => { })
+      .catch(error => console.error(error))
+  }
+
     return (
         <Navbar className='navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -16,13 +31,39 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">
-            <Link className='' to='/home'>Home</Link>
-            <Link className=''to='/courses'>Courses</Link>
-          
-          </Nav>
-          <Nav>
+            <Link to='/home'>Home</Link>
+            <Link to='/courses'>Courses</Link>
             <Link to='/faq'>FAQ</Link>
             <Link to='/blog'>Blog</Link>
+          
+          </Nav>
+          <Nav>           
+          <>
+              {
+                user?.uid ?
+                  <>
+                    <span>{user?.email}</span>
+                    <Button variant='light' onClick={handleLogOut}>Log Out</Button>
+                  </>
+                  :
+                  <>
+                    <Link to='/login'>Login</Link>
+                    <Link to='/register'>Register</Link>
+                    <Link> {
+                user?.photoURL ?
+                  <Image
+                    style={{ height: '30px' }}
+                    roundedCircle
+                    src={user?.photoURL}>
+
+                  </Image>
+                  : <FaUser></FaUser>
+              }</Link>
+                  </>
+              }
+
+
+            </>
           </Nav>
         </Navbar.Collapse>
       </Container>
