@@ -4,7 +4,8 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const Blog = () => {
     return (
-        <Accordion defaultActiveKey="0">
+       <div className='w-50 mx-auto mt-3'> 
+         <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>What is cors?</Accordion.Header>
           <Accordion.Body>
@@ -43,6 +44,7 @@ const Blog = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+       </div>
     );
 };
 

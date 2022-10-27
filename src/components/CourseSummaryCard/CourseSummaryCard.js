@@ -6,11 +6,11 @@ import './CourseSummaryCard.css'
 
 const CourseSummaryCard = ({course}) => {
     // console.log(course)
-    const {id, title, description, image} = course;
+    const {title, description, image} = course;
     return (
       <div>
-          <Card className='' style={{ width: '18rem' }} >
-        <Card.Img style={{width: '300px', height: '200px'}} variant="top" src={image} />
+          <Card className='my-3' style={{ width: '18rem' }} >
+        <Card.Img className='' style={{width: '200px', height: '200px'}} variant="top" src={image} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>
