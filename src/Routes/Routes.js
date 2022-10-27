@@ -17,7 +17,7 @@ export const routes = createBrowserRouter([
         element: <Main></Main>,
         children: [
             {
-                path: '/home',
+                path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('https://assignment-ten-server-nine.vercel.app/')
               

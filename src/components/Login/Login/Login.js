@@ -72,7 +72,7 @@ const Login = () => {
    
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form className='w-50 mx-auto' onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control name="email" type="email" placeholder="Enter email" required />
@@ -87,8 +87,8 @@ const Login = () => {
             <Button variant="primary" type="submit">
                 Login
             </Button><br></br>
-            <Button onClick={handleGoogleSignIn} className="border border-2 m-2" variant="light" type="submit"><FaGoogle></FaGoogle></Button>
-            <Button onClick={handleGithubSignIn} className="border border-2 m-2" variant="light" type="submit"><FaGithub></FaGithub></Button>
+            <Button onClick={handleGoogleSignIn} className="border border-2 my-3" variant="light" type="submit"><FaGoogle></FaGoogle></Button>
+            <Button onClick={handleGithubSignIn} className="border border-2 my-3 mx-2" variant="light" type="submit"><FaGithub></FaGithub></Button>
             <br></br>
             <Form.Text>Sign in with Google or GitHub</Form.Text>
             <br></br>

@@ -26,13 +26,13 @@ const Header = () => {
   return (
     <Navbar className='navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link to='/home'><img className='brand-logo' src={logo} alt=" " /></Link>
-        <Link to='/home' className=''><Navbar.Brand>EduCare</Navbar.Brand></Link>
+        <Link to='/'><img className='brand-logo' src={logo} alt=" " /></Link>
+        <Link to='/' className=''><Navbar.Brand>EduCare</Navbar.Brand></Link>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">
-            <Link to='/home'>Home</Link>
+            <Link to='/'>Home</Link>
             <Link to='/courses'>Courses</Link>
             <Link to='/faq'>FAQ</Link>
             <Link to='/blog'>Blog</Link>

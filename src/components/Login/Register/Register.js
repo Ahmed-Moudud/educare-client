@@ -56,10 +56,10 @@ const Register = () => {
         setAccepted(event.target.checked)
     }
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form className='w-50 mx-auto' onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Fullname</Form.Label>
-                <Form.Control name="name" type="text" placeholder="Your Full name" />
+                <Form.Control name="name" type="text" placeholder="Your Fullname" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
