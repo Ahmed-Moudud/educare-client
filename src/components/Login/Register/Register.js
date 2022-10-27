@@ -56,7 +56,7 @@ const Register = () => {
         setAccepted(event.target.checked)
     }
     return (
-        <Form className='w-50 mx-auto' onSubmit={handleSubmit}>
+        <Form className='w-50 mx-auto mt-5' onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Fullname</Form.Label>
                 <Form.Control name="name" type="text" placeholder="Your Fullname" />

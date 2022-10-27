@@ -9,3 +9,41 @@
     border-radius: 50px;
 
 }
+
+#light {
+    background-color: #f3ebf6;
+  }
+  
+  #dark {
+    background-color: #2d2231fb;
+    color: white;
+  }
+
+
+
+@media (max-width: 600px) {
+    .main {
+      border-radius: 0px;
+    }
+  }
+  
+  .switch {
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .switch label {
+    margin: 10px;
+  }
+  
+  #light .switch label {
+    color: black;
+  }
+  
+  #dark .switch label {
+    color: white;
+  }
