@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Website Name: EduCare
+### Live Website Link: 
+
+
+
+### Features :
+1. This is a learning platform for web based technology. This site has six different types of courses for tech lovers.
+2. The show detail button take the visitors to the specific page for an individual technology.
+3. A navbar to browse freely accorss the site.
+4. A side navigation to help the website visitors.
+5. A check out button for every course to get premium access.
+
+### Technology uses in this project
+
+1. React
+2. React Router Dom
+3. React Bootstrap
+4. Firebase for Authentication
