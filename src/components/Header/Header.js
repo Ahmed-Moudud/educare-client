@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 import { Image } from 'react-bootstrap';
 import { FaUser } from 'react-icons/fa';
 
+
 const Header = () => {
 
   const { user, logOut } = useContext(AuthContext);
@@ -60,7 +61,7 @@ const Header = () => {
                 user?.photoURL ?
                   <Image
                     style={{ height: '30px' }}
-                    roundedCircle
+                    roundedCircle                    
                     src={user?.photoURL}>
 
                   </Image>

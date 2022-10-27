@@ -7,8 +7,8 @@ import './Courses.css'
 const Courses = () => {
     const allCourses = useLoaderData();
     return (
-     <div className='d-flex mx-3'>
-        <div className='w-100'>
+     <div className='d-flex justify-content-around mx-3'>
+        <div className=''>
             {
                 allCourses.map(course => <p key={course.id}><Link to={`/courses/${course.id}`}>{course.title}</Link></p>)
             }

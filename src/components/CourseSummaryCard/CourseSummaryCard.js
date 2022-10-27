@@ -9,14 +9,20 @@ const CourseSummaryCard = ({course}) => {
     const {id, title, description, image} = course;
     return (
       <div>
-          <Card className='' >
+          <Card className='' style={{ width: '18rem' }} >
         <Card.Img style={{width: '300px', height: '200px'}} variant="top" src={image} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>
-            {description}
+            {
+              description.length > 100?
+              <>{description.slice(0, 100) + '...'}<Link to={`/courses/${course.id}`}>Read More</Link></>
+              :
+              <span>{description}</span>              
+              
+            }
           </Card.Text>
-          <Link to={`/courses/${course.id}`}><Button variant="primary">Go somewhere</Button></Link>
+          <Link to={`/courses/${course.id}`}><Button variant="primary">Show Detail</Button></Link>
         </Card.Body>
       </Card>
       </div>

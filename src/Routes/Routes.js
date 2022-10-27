@@ -8,6 +8,8 @@ import Main from "../components/layout/Main";
 import Login from "../components/Login/Login/Login";
 import Register from "../components/Login/Register/Register";
 import SingleCourse from "../components/SingleCourse/SingleCourse";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+;
 
 export const routes = createBrowserRouter([
     {
@@ -16,7 +18,8 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/home',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('https://assignment-ten-server-nine.vercel.app/')
               
             },
             {
@@ -26,7 +29,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses/:id',
-                element: <SingleCourse></SingleCourse>,
+                element:<PrivateRoute> <SingleCourse></SingleCourse></PrivateRoute>,
                 loader: ({params}) => fetch(`https://assignment-ten-server-nine.vercel.app/courses/${params.id}`)
             },
             {
@@ -35,7 +38,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <Blog></Blog>
+                element:  <Blog></Blog>
             },
             {
                 path: '/login',
@@ -46,7 +49,6 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             },
            
-
         ]
     },
     {
