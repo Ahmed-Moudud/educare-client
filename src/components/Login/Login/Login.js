@@ -1,4 +1,3 @@
-import { signInWithPopup } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -60,7 +59,7 @@ const Login = () => {
         signInWithGithub()
         .then( result => {
             const user = result.user;
-            
+            setUser(user);
             console.log(user);
         })
         .catch( error => {
