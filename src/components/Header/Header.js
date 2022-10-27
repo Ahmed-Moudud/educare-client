@@ -13,21 +13,21 @@ import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
 
-  const {user, logout } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
 
   const handleLogOut = () => {
-    logout()
+    logOut()
       .then(() => { })
       .catch(error => console.error(error))
   }
 
-    return (
-        <Navbar className='navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
+  return (
+    <Navbar className='navbar' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link to='/home'><img className='brand-logo' src={logo} alt=" "/></Link>
+        <Link to='/home'><img className='brand-logo' src={logo} alt=" " /></Link>
         <Link to='/home' className=''><Navbar.Brand>EduCare</Navbar.Brand></Link>
-        
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">
@@ -35,21 +35,28 @@ const Header = () => {
             <Link to='/courses'>Courses</Link>
             <Link to='/faq'>FAQ</Link>
             <Link to='/blog'>Blog</Link>
-          
+
           </Nav>
-          <Nav>           
+          <Nav>
           <>
               {
                 user?.uid ?
                   <>
-                    <span>{user?.email}</span>
+                    <span>{user?.displayName}</span>
                     <Button variant='light' onClick={handleLogOut}>Log Out</Button>
                   </>
                   :
                   <>
                     <Link to='/login'>Login</Link>
                     <Link to='/register'>Register</Link>
-                    <Link> {
+                  </>
+              }
+
+
+            </>
+
+            <Link to="/login">
+              {
                 user?.photoURL ?
                   <Image
                     style={{ height: '30px' }}
@@ -58,17 +65,14 @@ const Header = () => {
 
                   </Image>
                   : <FaUser></FaUser>
-              }</Link>
-                  </>
               }
+            </Link>
 
-
-            </>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    );
+  );
 };
 
 export default Header;

@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Blog from "../Blog/Blog";
-import Login from "../components/Login/Login";
-import Register from "../components/Register/Register";
-import Courses from "../Courses/Courses";
-import FAQ from "../FAQ/FAQ";
-import Home from "../Home/Home";
-import Main from "../layout/Main";
-import SingleCourse from "../SingleCourse/SingleCourse";
+import Blog from "../components/Blog/Blog"
+import Courses from "../components/Courses/Courses";
+import FAQ from "../components/FAQ/FAQ";
+import Home from "../components/Home/Home";
+import Main from "../components/layout/Main";
+import Login from "../components/Login/Login/Login";
+import Register from "../components/Login/Register/Register";
+import SingleCourse from "../components/SingleCourse/SingleCourse";
 
 export const routes = createBrowserRouter([
     {

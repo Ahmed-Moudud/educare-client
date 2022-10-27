@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import CourseSummaryCard from '../CourseSummaryCard/CourseSummaryCard';
+
 import './Courses.css'
 
 const Courses = () => {
