@@ -8,7 +8,7 @@ const Courses = () => {
     const allCourses = useLoaderData();
     return (
      <div className='d-flex mx-3'>
-        <div className='w-25'>
+        <div className='w-100'>
             {
                 allCourses.map(course => <p key={course.id}><Link to={`/courses/${course.id}`}>{course.title}</Link></p>)
             }
