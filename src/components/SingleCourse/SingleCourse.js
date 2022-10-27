@@ -15,7 +15,7 @@ const SingleCourse = () => {
                <p>{description}</p> 
                <img src={image} style={{width: '400px', height: '300px'}} alt=' '></img>
                
-           <Link to={`/courses/${id}`}><Button className="d-block my-2">CheckOut</Button></Link>
+           <Link to={`/courses/${id}`}><Button className="d-block my-2">Get Premium Access</Button></Link>
         </div>
     );
 };

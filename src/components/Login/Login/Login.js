@@ -83,6 +83,10 @@ const Login = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control name="password" type="password" placeholder="Password" required />
             </Form.Group>
+
+            <Form.Text className= "text-danger">
+                {error}
+            </Form.Text> <br></br>
             
             <Button variant="primary" type="submit">
                 Login
@@ -96,9 +100,7 @@ const Login = () => {
                 Do you want to create a new accout? Please <Link to="/register">Register</Link>
             </Form.Text>
 
-            <Form.Text className= "text-danger">
-                {error}
-            </Form.Text>
+            
             
         </Form>
     );
