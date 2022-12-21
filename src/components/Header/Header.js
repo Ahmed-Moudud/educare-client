@@ -79,14 +79,7 @@ const Header = () => {
             </Link>
 
           </Nav>
-          <Nav>
-          <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <div id={theme} className="switch">
-          <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
-          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-        </div>
-          </ThemeContext.Provider>
-          </Nav>
+      
         </Navbar.Collapse>
       </Container>
     </Navbar>
